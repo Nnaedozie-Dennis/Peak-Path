@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PeakPath</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+
+
+</head>
+<body>
+
+<div class="container">
+  <header class="header">
+    <div class="left">
+      <h3>PEAK <span>PATH</span></h3>
+      <button class="hamburger" >
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+  <nav>
+  <ol>
+    <li><a  href="#home">Home</a></li>
+    <li class="has-dropdown">
+      <div class="join">
+        <a href="#destination" class="link">
+          <span>Destinations</span> </a>
+          <ion-icon name="chevron-down-outline" class="arrow-icon"></ion-icon> 
+      </div>
+      <ul class="dropdown">
+        <li>Mountains</li>
+        <li>Beaches</li>
+        <li>Forests</li>
+        <li>Cities</li>
+      </ul>
+    </li>
+    <li class="has-dropdown">
+      <div class="join">
+        <a href="#tours" class="link"><span>Tours</span></a>
+        <ion-icon name="chevron-down-outline" class="arrow-icon"></ion-icon>
+      </div>
+      <ul class="dropdown">
+        <li>Hiking</li>
+        <li>Safari</li>
+        <li>Culture</li>
+        <li>Road Trips</li>
+      </ul>
+    </li>
+    <li><a class="link" href="#blog">Blog</a></li>
+    <li><a class="link" href="#about">About Us</a></li>
+  </ol>
+  </nav>
+      </div>
+
+    <div class="btn">
+      <a href="#contact">
+      <button class="btn-contact">
+        <ion-icon name="scale-outline"></ion-icon>
+        <p>Contact</p>
+      </button>
+    </a>
+    <a href="./login.html">
+      <button class="btn-sign-up">
+        <ion-icon name="person-outline"></ion-icon>
+        <p>Sign Up</p>
+      </button>
+      </a>
+    </div>
+  </header>
+
+  <nav class="sidebar">
+    <div class="sidebar-header">
+      <button class="close-sidebar">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+    </div>
+    <ol>
+    <li><a  href="#home">Home</a></li>
+    <li><a href="#destination">Destinations</a></li>
+    <li><a href="#tours">Tours</a></li>
+    <li><a href="#testimonial">Testimonial</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#about">About Us</a></li>
+  </ol>
+    <div class="sidebar-buttons">
+      <a href="#contact">
+      <button class="btn-contact">
+        <ion-icon name="scale-outline"></ion-icon>
+        <p>Contact</p>
+      </button>
+    </a>
+      <a href="./login.html">
+      <button class="btn-sign-up">
+        <ion-icon name="person-outline"></ion-icon>
+        <p>Sign Up</p>
+      </button>
+      </a>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="top">
+      <ion-icon name="earth-outline"></ion-icon>
+      <p>Your Next Adventure Starts Here!</p>
+    </div>
+    <h1>Discover Your Next Adventure</h1>
+    <p >Find thrilling experiences worldwide, from skydiving to deep-sea-diving</p>
+
+    <div class="search-box">
+      <div class="select">
+        <ion-icon name="location-sharp"></ion-icon>
+        <select>
+        <option value="">Select Destination</option>
+        <option value="">Mountains</option>
+        <option value="">Beaches</option>
+        <option value="">Forests</option>
+        <option value="">Cities</option>
+        <option value="">Deserts</option>
+        <option value="">Islands</option>
+      </select>
+      </div>
+      
+      <div class="select">
+        <ion-icon name="footsteps-sharp"></ion-icon>
+        <select>
+        <option value="">Select Tour Type</option>
+        <option value="">Hiking</option>
+        <option value="">Safari</option>
+        <option value="">Cultural Tour</option>
+        <option value="">Road Trip</option>
+        <option value="">Wildlife Watching</option>
+        <option value="">Diving</option>
+      </select>
+      </div>
+
+      <div class="select">
+        <ion-icon name="partly-sunny-sharp"></ion-icon>
+        <select>
+        <option value="">Select Season</option>
+        <option value="">Spring (Mar - May)</option>
+        <option value="">Summer (Jul - Aug)</option>
+        <option value="">Autumn/Fall (Sep - Nov)</option>
+        <option value="">Winter (Dec - Feb)</option>
+      </select>
+      </div>
+
+      <div class="select">
+      <input type="range" id="price-range" min="150" max="2000" step="10" value="800">
+      <p id="range-value">$800</p>
+    </div>
+
+      <button>
+        <ion-icon name="search-sharp"></ion-icon>
+        <p>Find Your Adventure</p>
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </button>
+    </div>
+  </section>
+
+  <section class="explore" id="destination">
+    <div class="top">
+    <div class="top-left">
+      <h6>Explore Popular Tours</h6>
+      <h1>Unforgettable Adventures, Handpicked for You</h1>
+      <p>Explore Breathtaking destinations and thrilling experiences created by experts. Find your next adventure today!</p>
+    </div>
+    <div class="top-right">
+      <p>See More</p>
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </div>
+    </div>
+    <div class="explore-articles">
+      <div class="article">
+        <div class="profile-pic">
+          <img src="images/2.jpg" alt="">
+        </div>
+        <div class="description">
+          <div class="heading">
+            <h3>Machu Picchu Expedition</h3>
+            <span><ion-icon name="star-sharp"></ion-icon>4.5</span>
+          </div>
+          <h4>Peru</h4>
+          <p>Discover the ancient Incan city nestled in the Andes. A breathtaking blend of history, mystery, and mountain views.</p>
+          <div class="bottom">
+            <span class="price">From $850 per person</span>
+            <button>View Details</button>
+          </div>
+        </div>
+        <div class="rank">
+          <button class="landing-spot">Hot Picks</button>
+        <button class="top-rated">Top Rated</button>
+        </div>
+      </div>
+
+      <div class="article">
+        <div class="profile-pic">
+          <img src="images/3.jpg" alt="">
+        </div>
+        <div class="description">
+          <div class="heading">
+            <h3>Great Barrier Reef Diving</h3>
+            <span><ion-icon name="star-sharp"></ion-icon>4.9</span>
+          </div>
+          <h4>Australia</h4>
+          <p>Dive into vibrant coral reefs and endless coastal beauty. It's an underwater wonderland like no other.</p>
+          <div class="bottom">
+            <span class="price">From $600 per person</span>
+            <button>View Details</button>
+          </div>
+        </div>
+        <div class="rank">
+          <button class="landing-spot">Hot Picks</button>
+        <button class="trending-now">Trending Now</button>
+        </div>
+      </div>
+
+      <div class="article">
+        <div class="profile-pic">
+          <img src="images/4.jpeg" alt="">
+        </div>
+        <div class="description">
+          <div class="heading">
+            <h3>Safari Adventure</h3>
+            <span><ion-icon name="star-sharp"></ion-icon>4.7</span>
+          </div>
+          <h4>Tanzania</h4>
+          <p >Witness Africa’s Big Five in their natural habitat. Every drive brings a new story across the wild savannah.</p>
+          <div class="bottom">
+            <span class="price">From $1500 per person</span>
+            <button>View Details</button>
+          </div>
+        </div>
+        <div class="rank">
+        <button class="top-rated">Top Rated</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust" id="about">
+    <div class="top">
+      <div class="top-left">
+      <h6>Trust and Credibility</h6>
+      <h1>Why Travelers Trust <span>PeakPath</span></h1>
+      <p>From expertly curvated adventures to 24/7 support, we ensure a seamless and unforgettable travel experience.</p>
+    </div>
+    <div class="top-right">
+      <p>Explore More</p>
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </div>
+    </div>
+
+<div class="content">
+  <div class="left">
+    <div class="item">
+  <div class="number">1</div>
+  <div class="text">
+    <h3>Expertly Curated Adventures</h3>
+    <p>Every adventure on the platform is handpicked, reviewed, and vetted to ensure quality, safety, and an amazing experience.</p>
+    </div>
+    <span></span>
+  </div>
+  
+  <div class="item">
+  <div class="number">2</div>
+  <div class="text">
+    <h3>Best Price Guarantee</h3>
+    <p>Our Platform offers the best deals with no hidden fees. If you find the same tour cheaper elsewhere, you may match or beat the price.</p>
+  </div>
+  <span></span>
+  </div>
+
+  <div class="item">
+  <div class="number">3</div>
+  <div class="text">
+    <h3>Verified Reviews</h3>
+    <p>See what thousands of customers have to say about us. 100% real reviews from people who have experienced the adventures firsthand.</p>
+    </div>
+    <span></span>
+  </div>
+
+    <div class="item">
+        <div class="number">4</div>
+        <div class="text">
+          <h3>24/7 Customer Support</h3>
+          <p>You can get help anytime via live chat, email, or phone support. If you're booking, making changes, or need assistance, we're here for you.</p>
+        </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <img src="images/5.1.jpg" alt="">
+  </div>
+  </div>
+  </section>
+
+  <section class="testimonial" id="testimonial">
+    <div class="user">
+    <div class="profile-pic">
+      <img src="images/user1.jpeg" alt="">
+    </div>
+    <div class="review">
+      <p> "The safari in Tanzania was nothing short of magical. Seeing elephants and lions in their natural habitat was surreal. The entire journey was well organized, and I could truly soak in the beauty and stillness of the wild. Huge thanks to PeakPath for making this possible!"</p>
+    </div>
+    <div class="rating">
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+    </div>
+    <div class="name">
+      <h6>Jessica Martinez</h6>
+    </div>
+    <div class="date">
+      <p>Safari Adventure – April 2025</p>
+    </div>
+    </div>
+
+    <div class="user">
+    <div class="profile-pic">
+      <img src="images/user2.jpeg" >
+    </div>
+    <div class="review">
+      <p> "Climbing Machu Picchu was something I’ve dreamed of for years, and PeakPath made every step worth it. The views were breathtaking, the guides were incredibly supportive, and I felt safe and inspired the whole way through. I’ll never forget that sunrise at the summit."</p>
+    </div>
+    <div class="rating">
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+    </div>
+    <div class="name">
+      <h6>Tyrell Bennett</h6>
+    </div>
+    <div class="date">
+      <p>Machu Picchu Expedition – July 2024</p>
+    </div>
+    </div>
+
+    <div class="user">
+    <div class="profile-pic">
+      <img src="images/user3.jpg" alt="">
+    </div>
+    <div class="review">
+      <p> "Diving into the Great Barrier Reef was like entering a hidden universe under the sea. The water was crystal clear, the corals were vivid, and every moment felt like a discovery. The instructors were kind and professional — PeakPath nailed it!"</p>
+    </div>
+    <div class="rating">
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+    </div>
+    <div class="name">
+      <h6>Okafor Chioma</h6>
+    </div>
+    <div class="date">
+      <p>Great Barrier Reef Diving – March 2024</p>
+    </div>
+    </div>
+
+    <div class="user">
+    <div class="profile-pic">
+      <img src="images/user4.jpg" alt="">
+    </div>
+    <div class="review">
+      <p> "I went on a road trip tour across Australia and it turned out to be one of the most freeing experiences of my life. From open roads to hidden scenic gems, everything was planned with just the right balance of adventure and comfort. I’m already planning my next trip with PeakPath."</p>
+    </div>
+    <div class="rating">
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+    </div>
+    <div class="name">
+      <h6>Luca Romano</h6>
+    </div>
+    <div class="date">
+      <p>Road Trip Adventure – May 2023</p>
+    </div>
+    </div>
+
+    <div class="user">
+    <div class="profile-pic">
+      <img src="images/user5.jpeg" alt="">
+    </div>
+    <div class="review">
+      <p> "My cultural tour opened my eyes in so many ways. From traditional dances to local dishes, every day was a rich experience. The people I met, both travelers and locals, made it even more meaningful. PeakPath truly knows how to deliver authenticity."</p>
+    </div>
+    <div class="rating">
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+    </div>
+    <div class="name">
+      <h6> Grace Anderson</h6>
+    </div>
+    <div class="date">
+      <p>Cultural Tour - August 2023</p>
+    </div>
+    </div>
+
+    <button id="prevBtn"><ion-icon name="chevron-back-outline"></ion-icon></button>
+    <button id="nextBtn"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+
+
+    <div class="dots">
+          <span class="d-user1"></span>
+          <span class="d-user2"></span>
+          <span class="d-user3"></span>
+          <span class="d-user4"></span>
+          <span class="d-user5"></span>
+      </div>
+  </section>
+    
+  <section class="companies">
+    <h2>Trusted By World Best Organisation</h2>
+  <div class="logos">
+    <div class="logo-track">
+      <div class="logo"> <img src="images/logo/1.png" alt=""></div>
+      <div class="logo"> <img src="images/logo/2.png" alt=""> </div>
+      <div class="logo"> <img src="images/logo/3.png" alt=""></div>
+      <div class="logo"> <img src="images/logo/4.png" alt=""></div>
+      <div class="logo" > <img src="images/logo/5.png" alt=""></div>
+      <div class="logo" > <img src="images/logo/6.png" alt=""></div>
+      <div class="logo" > <img src="images/logo/7.png" alt=""></div>
+      <div class="logo"> <img src="images/logo/8.png" alt=""></div>
+      <div class="logo"> <img src="images/logo/9.png" alt=""></div>
+      <div class="logo"> <img src="images/logo/10.png" alt=""></div>
+      <div class="logo"> <img src="images/logo/11.png" alt=""></div>
+
+      <div class="logo"> <img src="images/logo/1.png" alt=""></div>
+      <div class="logo"> <img src="images/logo/2.png" alt=""> </div>
+      <div class="logo"> <img src="images/logo/3.png" alt=""></div>
+      <div class="logo"> <img src="images/logo/4.png" alt=""></div>
+      <div class="logo" > <img src="images/logo/5.png" alt=""></div>
+      <div class="logo" > <img src="images/logo/6.png" alt=""></div>
+      <div class="logo" > <img src="images/logo/7.png" alt=""></div>
+      <div class="logo"> <img src="images/logo/8.png" alt=""></div>
+      <div class="logo"> <img src="images/logo/9.png" alt=""></div>
+      <div class="logo"> <img src="images/logo/10.png" alt=""></div>
+      <div class="logo"> <img src="images/logo/11.png" alt=""></div>
+    </div>
+  </div>
+  </section>
+
+  <section class="step-further" id="tours">
+    <div class="top">
+      <div class="top-left">
+      <h6>Take It A Step Further</h6>
+      <h1>Explore Adventures by Category</h1>
+      <p>Discover the perfect adventure based on your interests. Browse our selection of adventire categories and find the experience that speaks to your soul</p>
+    </div>
+    <div class="top-right">
+      
+    </div>
+    </div>
+
+    <div class="filter-btn">    
+        <div class="all-category btn">
+          <ion-icon name="funnel-outline"></ion-icon>
+          <button >All Category</button>
+        </div>   
+
+        <div class="btn">
+          <ion-icon name="heart-outline"></ion-icon>
+          <button>Most Popular</button>
+        </div>
+
+        <div class="btn">
+          <ion-icon name="star-outline"></ion-icon>
+          <button>Highest Rated</button>
+        </div>
+        </div>
+      
+        <div class="article-slider">
+      <div class="explore-articles">
+      <div class="article">
+        <div class="profile-pic">
+          <img src="images/adv-1.jpg" alt="">
+        </div>
+        <div class="description">
+          <div class="heading">
+            <h3>Mountain & Trekking</h3>
+          </div>
+          <p>Conquer peaks and trails that challenge your body and uplift your spirit.</p>
+        </div>
+      </div>
+
+      <div class="article">
+        <div class="profile-pic">
+          <img src="images/adv-2.jpg" alt="">
+        </div>
+        <div class="description">
+          <div class="heading">
+            <h3>Camping & Survival</h3>
+          </div>
+          <p>Reconnect with nature through off-grid escapes and wilderness skills.</p>
+        </div>
+      </div>
+
+      <div class="article">
+        <div class="profile-pic">
+          <img src="images/adv-3.jpeg" alt="">
+        </div>
+        <div class="description">
+          <div class="heading">
+            <h3>Water Adventures</h3>
+          </div>
+          <p>Dive into thrills with activities like rafting, kayaking, and snorkeling.</p>
+        </div>
+      </div>
+
+      <div class="article">
+        <div class="profile-pic">
+          <img src="images/adv-4.jpeg" alt="">
+        </div>
+        <div class="description">
+          <div class="heading">
+            <h3>Wildlife</h3>
+          </div>
+          <p>Get up close with majestic animals in their natural habitats and capture beautiful moments.</p>
+        </div>
+      </div>
+
+      <div class="article">
+        <div class="profile-pic">
+          <img src="images/adv-5.jpg" alt="">
+        </div>
+        <div class="description">
+          <div class="heading">
+            <h3>Road Trips & Scenic Drives</h3>
+          </div>
+          <p>Cruise through iconic routes and landscapes worth pulling over for.</p>
+        </div>
+      </div>
+
+      <div class="article">
+        <div class="profile-pic">
+          <img src="images/adv-6.jpg" alt="">
+        </div>
+        <div class="description">
+          <div class="heading">
+            <h3>Cultural & Heritage Tours</h3>
+          </div>
+          <p>Step into the heart of traditions, ancient sites, and vibrant local stories.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="bottom">
+      <button id="article-prev"><ion-icon name="chevron-back-outline"></ion-icon></button>
+      <button id="article-next"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+
+  <div class="article-dots">
+    <span class="article-dot"></span>
+    <span class="article-dot"></span>
+    <span class="article-dot"></span>
+    <span class="article-dot"></span>
+  </div>
+    </div>
+  </section>
+
+  <section class="map">
+    <div id="real-map" class="background-map"></div>
+
+    <div class="filter-box">
+      <h2>
+        <ion-icon name="funnel-outline"></ion-icon>
+        Filter Adventures
+      </h2>
+
+      <div>
+        <label for="category">Location</label>
+        <select id="country">
+          <option value="">Select Adventure Location</option>
+          <option value="peru">Peru</option>
+          <option value="australia">Australia</option>
+          <option value="tanzania">Tanzania</option>
+          <option value="newzealand">New Zealand</option>
+          <option value="switzerland">Switzerland</option>
+          <option value="thailand">Thailand</option>
+          <option value="canada">Canada</option>
+          <option value="iceland">Iceland</option>
+          <option value="nepal">Nepal</option>
+          <option value="southafrica">South Africa</option>
+</select>
+      </div>
+
+      <div>
+        <label for="difficulty">Type</label>
+        <select id="adventure-type">
+          <option>Select Adventure Type</option>
+          <option>Mountain and Trekking</option>
+          <option>Camping and Survival</option>
+          <option>Water Adventures</option>
+          <option>Wildlife and Safari</option>
+          <option>Snow and Ice</option>
+          <option>Cultural and Heritage</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="">Price Range</label>
+      </div>
+      <div class="select">
+      <input type="range" id="price-range-2" min="150" max="2000" step="10" value="800">
+      <p id="range-value-2">$800</p>
+    </div>
+
+      
+
+      <button onclick="findAdventure()">
+        <ion-icon name="navigate-outline"></ion-icon>
+        Find Adventure Near Me
+      </button>
+    </div>
+
+    <div id="adventureModal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <p>🌍 Finding adventure near you...</p>
+      </div>
+    </div>
+  </section>
+
+    <section class="blog" id="blog">
+      <div class="top">
+        <h6>Resources</h6>
+        <h1>Blog & Travel Guide</h1>
+        <p>Explore, Learn and get inspired for your next adventure</p>
+      </div>
+
+      <div class="article-container">
+        <div class="article">
+          <div class="image">
+            <img src="images/blog-1.jpeg" alt="">
+          </div>
+          <div class="text">
+            <span>New</span>
+            <h4>10 Must-Visit Adventure Destinations for 2025</h4>
+            <p>Discover the top travel spots that will spark your wanderlust in the new year — from hidden gems to epic landscapes.</p>
+            <div class="user">
+              <div class="profile">
+                <img src="images/blog-pic1.jpeg" alt="">
+              </div>
+              <div class="info">
+                <h5>Emily Dawson</h5>
+                <p>April 12, 2025 &nbsp; &bull; &nbsp; 1 min read</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="article">
+          <div class="image">
+            <img src="images/blog-3.jpg" alt="">
+          </div>
+          <div class="text">
+            <span>New</span>
+            <h4>How to Pack Smart for a 2-Week Backpacking Trip</h4>
+            <p>Learn how to pack light without missing the essentials — pro tips for making the most of your backpacking journey.</p>
+            <div class="user">
+              <div class="profile">
+                <img src="images/blog-pic3.jpeg" alt="">
+              </div>
+              <div class="info">
+                <h5>James Carter</h5>
+                <p>April 3, 2025 &nbsp; &bull; &nbsp; 4 min read</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="article">
+          <div class="image">
+            <img src="images/blog-4.jpeg" alt="">
+          </div>
+          <div class="text">
+            <span>New</span>
+            <h4>The 7 Adventure Activities for Adrenaline Junkies</h4>
+            <p>Craving a rush? These high-energy activities are made for thrill-seekers who want to go all out.</p>
+            <div class="user">
+              <div class="profile">
+                <img src="images/blog-pic4.jpeg" alt="">
+              </div>
+              <div class="info">
+                <h5>Noah Bennett</h5>
+                <p>March 27, 2025 &nbsp; &bull; &nbsp; 5 min read</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="article">
+          <div class="image">
+            <img src="images/blog-2.jpg" alt="">
+          </div>
+          <div class="text">
+            <span>New</span>
+            <h4>The Ultimate Safari Experience: 5 Things You Must Know</h4>
+            <p>First time on a safari? Here are the key things to expect, prepare for, and enjoy while in the wild.</p>
+            <div class="user">
+              <div class="profile">
+                <img src="images/blog-pic2.jpeg" alt="">
+              </div>
+              <div class="info">
+                <h5>Angela Kimani</h5>
+                <p>March 20, 2025 &nbsp; &bull; &nbsp; 2 min read</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <button>
+        <span>View All</span> 
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </button>
+    </section>
+
+    <section class="next-adventure">
+      <div class="background">
+        <img src="images/next-adv.png" alt="">
+        <div class="text">
+          <h1>Your Next Adventure Awaits!</h1>
+          <p>Join thousands of explorers finding unforgettable experiences worldwide. Whether you're craving mountain peaks, ocean depths, or wild safaris - there's a journey out there with your name on it. Let's help you find it. <br><br> Book Now & Get 15% off!</p>
+          <button><span> Get Started </span><ion-icon name="arrow-forward-outline"></ion-icon></ion-icon></button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="footer-top">
+          <div class="left">
+            <div class="logo">
+                <h1>PEAK <span>PATH</span></h1>
+            </div>
+            <div class="column">
+                    <h3>Quick Link</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><a href="#">000-123-4567</a></li>
+                        <li><a href="mailto:info@peakpath.com">info@peakpath.com</a></li>
+                        <li><a href="#">Live Chat</a></li>
+                    </ul>
+                </div>
+          </div>
+            
+            <div class="right">
+                <div class="subscribe">
+                    <h3>Subscribe</h3>
+                    <p>Join our newsletter to stay up to date on features and releases.</p>
+                    <form>
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p class="small">By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            <p>© 2025 PeakPath. All rights reserved.</p>  
+
+            <div class="links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Settings</a>
+            </div>
+            <div class="socials">
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-icon name="logo-linkedin"></ion-icon>
+          <ion-icon name="logo-whatsapp"></ion-icon>
+          <ion-icon name="logo-instagram"></ion-icon>
+        </div>
+        </div>
+    </footer>
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
